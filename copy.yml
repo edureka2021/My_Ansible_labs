@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   become: yes
+   tasks: 
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+       src: /root/hostname.yml
+       dest: /root/
+       owner: root
+       group: root
+       mode: '0644'
+ 
